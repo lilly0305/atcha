@@ -71,8 +71,9 @@ li {
   background-size: cover;
 }
 #wrap header {
-  width: 94%;
+  width: 90%;
   height: 60px;
+  padding: 1em 0 0;
   margin: 0 auto;
 }
 #wrap header .headerWrap {
@@ -83,7 +84,7 @@ li {
 }
 #wrap header .headerWrap span {
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #707070;
   font-family: "MaruBuri-Regular", sans-serif;
   font-weight: 600;
@@ -120,35 +121,75 @@ li {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-#wrap .divider {
+#wrap .topDivider {
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  padding: 0 100px;
+  margin-top: 1em;
+  padding: 0 5%;
 }
-#wrap .divider::before {
+#wrap .topDivider::before, #wrap .topDivider::after {
   position: absolute;
   content: "";
-  left: 40px;
   top: -14px;
-  width: 40px;
-  height: 39px;
+  width: 35px;
+  height: 34px;
   background-image: url("/img/pattern.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
-#wrap .divider::after {
-  position: absolute;
-  content: "";
-  right: 40px;
-  top: -14px;
-  width: 40px;
-  height: 39px;
-  background-image: url("/img/pattern.png");
-  background-repeat: no-repeat;
-  background-size: contain;
+#wrap .topDivider::before {
+  left: 20px;
+}
+#wrap .topDivider::after {
+  right: 20px;
   transform: rotateY(180deg);
 }
-#wrap .divider img {
+#wrap .topDivider img {
   width: 100%;
+}
+#wrap main {
+  margin-top: 1.5em;
+}
+#wrap main .mainSlider {
+  width: 90%;
+  height: 85vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#wrap main .mainSlider .swiper-wrapper {
+  transform: translate3d(0, 0, 0) !important;
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: auto;
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide .progressbar {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.5);
+  left: 30%;
+  bottom: 40px;
+  width: 40%;
+  height: 3px;
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide .progressbar span {
+  position: absolute;
+  z-index: 2;
+  background-color: white;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  -webkit-animation: progressbar 4s linear infinite;
+          animation: progressbar 4s linear infinite;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }

@@ -1,5 +1,6 @@
 @import "common";
-#wrap{
+
+#wrap {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
@@ -7,40 +8,45 @@
     background-repeat: repeat-y;
     background-size: cover;
 
-    header{
-        width: 94%;
+    header {
+        width: 90%;
         height: 60px;
+        padding: 1em 0 0;
         margin: 0 auto;
 
-        .headerWrap{
+        .headerWrap {
             height: inherit;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            span{
+
+            span {
                 display: inline-block;
-                font-size: $fs200;
+                font-size: $fs400;
                 color: $grey-color;
                 font-family: $point-kor-font;
                 font-weight: 600;
                 flex: 1;
             }
-            a{
+
+            a {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex: 3;
 
-                img{
+                img {
                     height: 40px;
                 }
             }
-            div{
+
+            div {
                 flex: 1;
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
-                p{
+
+                p {
                     position: relative;
                     width: 45px;
                     height: 45px;
@@ -48,7 +54,7 @@
                     border: 2px solid white;
                     overflow: hidden;
 
-                    img{
+                    img {
                         position: absolute;
                         width: 100%;
                         height: auto;
@@ -63,40 +69,85 @@
     }
 
 
-    .divider {
+    .topDivider {
         position: relative;
         box-sizing: border-box;
         width: 100%;
-        padding: 0 100px;
+        margin-top: 1em;
+        padding: 0 5%;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            top: -14px;
+            width: 35px;
+            height: 34px;
+            background-image: url("/img/pattern.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &::before {
+            left: 20px;
+        }
+
+        &::after {
+            right: 20px;
+            transform: rotateY(180deg);
+        }
+
+        img {
+            width: 100%;
+        }
     }
 
-    .divider::before {
-        position: absolute;
-        content: '';
-        left: 40px;
-        top: -14px;
-        width: 40px;
-        height: 39px;
-        background-image: url("/img/pattern.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
+    main {
+        margin-top: 1.5em;
+        .mainSlider{
+            width: 90%;
+            height: 85vh;
+            margin: 0 auto;
+            overflow: hidden;
 
-    .divider::after {
-        position: absolute;
-        content: '';
-        right: 40px;
-        top: -14px;
-        width: 40px;
-        height: 39px;
-        background-image: url("/img/pattern.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        transform: rotateY(180deg);
-    }
+            .swiper-wrapper{
+                transform: translate3d(0, 0, 0) !important;
 
-    .divider img {
-        width: 100%;
+                .swiper-slide{
+                    width: 100%;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                    .progressbar{
+                        position: absolute;
+                        content: '';
+                        z-index: 1;
+                        background-color: rgba(255, 255, 255, 0.5);
+                        left: 30%;
+                        bottom: 40px;
+                        width: 40%;
+                        height: 3px;
+
+                        span{
+                            position: absolute;
+                            z-index: 2;
+                            background-color: white;
+                            left: 0;
+                            bottom: 0;
+                            width: 0;
+                            height: 3px;
+                            animation: progressbar 4s linear infinite;
+                            animation-delay: 0.3s;
+                        }
+                    }
+                }
+            }
+        }
     }
 
 
