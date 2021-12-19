@@ -1,0 +1,165 @@
+@import url(https://fonts.googleapis.com/css2?family=Comforter&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Comforter&display=swap);
+@charset "UTF-8";
+@font-face {
+  font-family: "MaruBuri-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+#fullScreen {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  color: #707070;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.clear:after {
+  /* 자식이 모두 float 을 사용할때 부모가 높이를 갖게하기 위함 */
+  content: "";
+  display: block;
+  clear: both;
+  *zoom: 1;
+  /* IE8 이하버전 대응 */
+}
+
+.loginWrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.loginWrap main.loginLeft {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.loginWrap main.loginLeft section {
+  width: 100%;
+  text-align: center;
+}
+.loginWrap main.loginLeft section p {
+  font-family: "MaruBuri-Regular";
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.loginWrap main.loginLeft section img {
+  width: 200px;
+}
+.loginWrap main.loginLeft form {
+  text-align: center;
+}
+.loginWrap main.loginLeft form input {
+  width: 400px;
+  margin-bottom: 40px;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 2px solid #707070;
+  background: transparent;
+  font-family: "Outfit", sans-serif;
+  color: #F87387;
+  text-align: center;
+  font-weight: bold;
+  outline: none;
+  transition: all 0.5s;
+}
+.loginWrap main.loginLeft form input::-moz-placeholder {
+  font-size: 15px;
+  font-weight: normal;
+  opacity: 1;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.loginWrap main.loginLeft form input:-ms-input-placeholder {
+  font-size: 15px;
+  font-weight: normal;
+  opacity: 1;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.loginWrap main.loginLeft form input::placeholder {
+  font-size: 15px;
+  font-weight: normal;
+  opacity: 1;
+  transition: all 0.3s;
+}
+.loginWrap main.loginLeft form input:focus {
+  border-bottom: 2px solid #F87387;
+  caret-color: #F87387;
+}
+.loginWrap main.loginLeft form input:focus::-moz-placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+.loginWrap main.loginLeft form input:focus:-ms-input-placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+.loginWrap main.loginLeft form input:focus::placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+.loginWrap main.loginLeft form button {
+  margin-top: 80px;
+  cursor: pointer;
+  width: 120px;
+  height: 45px;
+  transform: skewX(-20deg);
+  background: transparent;
+  border: 2px solid #707070;
+  transition: all 0.3s;
+}
+.loginWrap main.loginLeft form button:hover {
+  border: 2px solid #F87387;
+}
+.loginWrap main.loginLeft form button:hover span {
+  color: #F87387;
+}
+.loginWrap main.loginLeft form button span {
+  display: inline-block;
+  font-family: "MaruBuri-Regular";
+  font-size: 16px;
+  color: #707070;
+  transform: skew(20deg);
+}
+.loginWrap main.loginRight img {
+  height: 100%;
+}

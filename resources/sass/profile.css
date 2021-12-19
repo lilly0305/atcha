@@ -1,0 +1,139 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Comforter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comforter&display=swap");
+@font-face {
+  font-family: 'MaruBuri-Regular';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+#fullScreen {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit; }
+
+html {
+  font-size: 62.5%;
+  color: #707070; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+ul,
+li {
+  list-style: none; }
+
+.clear:after {
+  /* 자식이 모두 float 을 사용할때 부모가 높이를 갖게하기 위함 */
+  content: "";
+  display: block;
+  clear: both;
+  *zoom: 1;
+  /* IE8 이하버전 대응 */ }
+
+#fullScreen .profileWrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  #fullScreen .profileWrap section {
+    text-align: center; }
+    #fullScreen .profileWrap section p {
+      margin-bottom: 20px;
+      font-family: 'MaruBuri-Regular', sans-serif;
+      font-size: 1.6rem;
+      color: #707070; }
+    #fullScreen .profileWrap section strong {
+      font-family: 'Comforter', cursive;
+      font-size: 6rem;
+      color: #F87387; }
+  #fullScreen .profileWrap .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 100px; }
+    #fullScreen .profileWrap .profile li {
+      text-align: center;
+      border-radius: 50%; }
+      #fullScreen .profileWrap .profile li span {
+        opacity: 0;
+        display: inline-block;
+        margin-top: 30px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #F87387; }
+    #fullScreen .profileWrap .profile figure {
+      cursor: pointer;
+      position: relative;
+      width: 140px;
+      height: 140px;
+      margin: 0 50px;
+      border-radius: 50%;
+      border: 1px solid #707070;
+      filter: grayscale(1);
+      overflow: hidden;
+      transition: all 0.5s; }
+      #fullScreen .profileWrap .profile figure.active {
+        border: 3px solid #F87387;
+        transform: scale(1.2);
+        filter: grayscale(0); }
+      #fullScreen .profileWrap .profile figure:hover {
+        filter: grayscale(0); }
+      #fullScreen .profileWrap .profile figure img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); }
+  #fullScreen .profileWrap .backArrow {
+    opacity: 0;
+    cursor: pointer;
+    text-align: center;
+    width: 45px;
+    margin-top: 80px; }
+  #fullScreen .profileWrap .start {
+    margin-top: 80px; }
+    #fullScreen .profileWrap .start button {
+      cursor: pointer;
+      width: 120px;
+      height: 45px;
+      transform: skewX(-20deg);
+      background: transparent;
+      border: 2px solid #707070;
+      transition: all 0.3s; }
+      #fullScreen .profileWrap .start button:hover {
+        border: 2px solid #F87387; }
+        #fullScreen .profileWrap .start button:hover span {
+          color: #F87387; }
+      #fullScreen .profileWrap .start button span {
+        display: inline-block;
+        font-family: 'MaruBuri-Regular';
+        font-size: 16px;
+        color: #707070;
+        transform: skew(20deg); }
+
+/*# sourceMappingURL=profile.css.map */

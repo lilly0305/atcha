@@ -1,0 +1,99 @@
+@import "common";
+
+#fullScreen{
+    .profileWrap{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        section{
+            text-align: center;
+            p{
+                margin-bottom: 20px;
+                font-family: 'MaruBuri-Regular', sans-serif;
+                font-size: 1.6rem;
+                color: $base-color;
+            }
+            strong{
+                font-family: 'Comforter', cursive;
+                font-size: 6rem;
+                color: $point-color;
+            }
+        }
+
+        .profile{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 100px;
+
+            li{
+                text-align: center;
+                border-radius: 50%;
+
+                span{
+                    opacity: 0;
+                    display: inline-block;
+                    margin-top: 30px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: $point-color;
+                }
+            }
+
+            figure{
+                cursor: pointer;
+                position: relative;
+                width: 140px;
+                height: 140px;
+                margin: 0 50px;
+                border-radius: 50%;
+                border: 1px solid $base-color;
+                filter: grayscale(1);
+                overflow: hidden;
+
+                transition: all 0.5s;
+
+                &.active{
+                    border: 3px solid #F87387;
+                    transform: scale(1.2);
+                    filter: grayscale(0);
+                }
+
+                &:hover{
+                    filter: grayscale(0);
+                }
+
+                img{
+                    position: absolute;
+                    width: 100%;
+                    height: auto;
+                    left: 50%;
+                    top: 50%;
+
+                    transform: translate(-50%, -50%);
+                }
+
+            }
+        }
+        .backArrow{
+            opacity: 0;
+            cursor: pointer;
+            text-align: center;
+            width: 45px;
+            margin-top: 80px;
+        }
+
+        .start{
+            margin-top: 80px;
+            button{
+                @include button();
+
+            }
+        }
+    }
+}
