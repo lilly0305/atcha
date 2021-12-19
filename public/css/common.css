@@ -1,6 +1,8 @@
 @import url(https://fonts.googleapis.com/css2?family=Comforter&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Comforter&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap);
 @charset "UTF-8";
 @font-face {
   font-family: "MaruBuri-Regular";
@@ -38,7 +40,7 @@ time, mark, audio, video {
 
 html {
   font-size: 62.5%;
-  color: #707070;
+  color: #282828;
 }
 
 a {

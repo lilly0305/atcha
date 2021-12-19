@@ -1,6 +1,8 @@
 @import url(https://fonts.googleapis.com/css2?family=Comforter&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Comforter&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap);
 @charset "UTF-8";
 @font-face {
   font-family: "MaruBuri-Regular";
@@ -38,7 +40,7 @@ time, mark, audio, video {
 
 html {
   font-size: 62.5%;
-  color: #707070;
+  color: #282828;
 }
 
 a {
@@ -83,7 +85,8 @@ li {
   display: inline-block;
   font-size: 1.2rem;
   color: #707070;
-  font-family: "MaruBuri-Regular";
+  font-family: "MaruBuri-Regular", sans-serif;
+  font-weight: 600;
   flex: 1;
 }
 #wrap header .headerWrap a {
@@ -116,4 +119,36 @@ li {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+#wrap .divider {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 100px;
+}
+#wrap .divider::before {
+  position: absolute;
+  content: "";
+  left: 40px;
+  top: -14px;
+  width: 40px;
+  height: 39px;
+  background-image: url("/img/pattern.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#wrap .divider::after {
+  position: absolute;
+  content: "";
+  right: 40px;
+  top: -14px;
+  width: 40px;
+  height: 39px;
+  background-image: url("/img/pattern.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotateY(180deg);
+}
+#wrap .divider img {
+  width: 100%;
 }

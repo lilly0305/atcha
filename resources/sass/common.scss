@@ -7,19 +7,39 @@
     font-weight: normal;
     font-style: normal;
 }
+// Noto Sans KR - 구글
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
 
 // Outfit 영어 고딕체 폰트 - 구글
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 // Comforter 영어 로고 폰트 - 구글
 @import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
-// font-family: 'Comforter', cursive;
+
+// Eczar 영어 고딕체 폰트 for 오늘의 영화 - 구글
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap');
 
 // ---------------------------------------------------------------- variables
-$base-color: #707070;
+// colors
+$base-color: #282828;
+$grey-color: #707070;
 $point-color: #F87387;
 
+// fonts
+$default-kor-font: 'Noto Sans KR', sans-serif;
+$default-eng-font: 'Outfit', sans-serif;
+$point-kor-font: 'MaruBuri-Regular', sans-serif;
+$point-eng-font: 'Eczar', serif;
+$logo-font: 'Comforter', cursive;
 
+// font sizes
+$fs200: 1.2rem;
+$fs300: 1.3rem;
+$fs400: 1.4rem;
+$fs500: 1.5rem;
+$fs600: 1.6rem;
+$fs-L: 2rem;
+$fs-XL: 6rem;
 
 
 //  ---------------------------------------------------------------- mixin
@@ -29,7 +49,7 @@ $point-color: #F87387;
     height: 45px;
     transform: skewX(-20deg);
     background: transparent;
-    border: 2px solid $base-color;
+    border: 2px solid $grey-color;
 
     transition: all 0.3s;
 
@@ -43,17 +63,12 @@ $point-color: #F87387;
 
     span{
         display: inline-block;
-        font-family: 'MaruBuri-Regular';
-        font-size: 16px;
-        color: #707070;
+        font-family: $point-kor-font;
+        font-size: $fs600;
+        color: $grey-color;
         transform: skew(20deg);
     }
 }
-
-@mixin pointFont {
-    font-family: 'MaruBuri-Regular';
-}
-
 
 // ---------------------------------------------------------------- common style
 #fullScreen{
@@ -87,7 +102,7 @@ time, mark, audio, video {
 
 html {
     font-size: 62.5%;
-    color: #707070;
+    color: $base-color;
 }
 
 a {
