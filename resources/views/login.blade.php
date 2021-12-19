@@ -21,8 +21,8 @@
                 </section>
                 <form action="">
                     <div>
-                        <input type="text" id="userName" name="userName" placeholder="Username">
-                        <label for="userName"></label>
+                        <input type="text" id="username" name="username" placeholder="Username">
+                        <label for="username"></label>
                     </div>
 
                     <div>
