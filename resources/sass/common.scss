@@ -20,10 +20,12 @@ $base-color: #707070;
 $point-color: #F87387;
 
 
+
+
 //  ---------------------------------------------------------------- mixin
 @mixin button {
     cursor: pointer;
-    width: 120px;
+    width: 150px;
     height: 45px;
     transform: skewX(-20deg);
     background: transparent;
@@ -48,13 +50,19 @@ $point-color: #F87387;
     }
 }
 
+@mixin pointFont {
+    font-family: 'MaruBuri-Regular';
+}
+
 
 // ---------------------------------------------------------------- common style
 #fullScreen{
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
-    //background-image: url("./public/img/bg.jpg");
+    background-image: url("/img/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 // ---------------------------------------------------------------- reset

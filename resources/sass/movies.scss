@@ -1,0 +1,102 @@
+@import "common";
+#wrap{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-image: url("/img/bg.jpg");
+    background-repeat: repeat-y;
+    background-size: cover;
+
+    header{
+        width: 94%;
+        height: 60px;
+        margin: 0 auto;
+
+        .headerWrap{
+            height: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            span{
+                display: inline-block;
+                font-size: 1.2rem;
+                color: $base-color;
+                @include pointFont();
+                flex: 1;
+            }
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 3;
+
+                img{
+                    height: 40px;
+                }
+            }
+            div{
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                p{
+                    position: relative;
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    border: 2px solid white;
+                    overflow: hidden;
+
+                    img{
+                        position: absolute;
+                        width: 100%;
+                        height: auto;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+
+        }
+    }
+
+
+    .divider {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 100px;
+    }
+
+    .divider::before {
+        position: absolute;
+        content: '';
+        left: 40px;
+        top: -14px;
+        width: 40px;
+        height: 39px;
+        background-image: url(../img/pattern.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .divider::after {
+        position: absolute;
+        content: '';
+        right: 40px;
+        top: -14px;
+        width: 40px;
+        height: 39px;
+        background-image: url(../img/pattern.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: rotateY(180deg);
+    }
+
+    .divider img {
+        width: 100%;
+    }
+
+
+}

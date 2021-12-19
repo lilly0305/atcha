@@ -12,6 +12,9 @@
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
+  background-image: url("/img/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -57,13 +60,13 @@ li {
   /* IE8 이하버전 대응 */
 }
 
-.loginWrap {
+#fullScreen .loginWrap {
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 100%;
 }
-.loginWrap main.loginLeft {
+#fullScreen .loginWrap main.loginLeft {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -71,23 +74,23 @@ li {
   justify-content: space-evenly;
   width: 100%;
 }
-.loginWrap main.loginLeft section {
+#fullScreen .loginWrap main.loginLeft section {
   width: 100%;
   text-align: center;
 }
-.loginWrap main.loginLeft section p {
+#fullScreen .loginWrap main.loginLeft section p {
   font-family: "MaruBuri-Regular";
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 20px;
 }
-.loginWrap main.loginLeft section img {
+#fullScreen .loginWrap main.loginLeft section img {
   width: 200px;
 }
-.loginWrap main.loginLeft form {
+#fullScreen .loginWrap main.loginLeft form {
   text-align: center;
 }
-.loginWrap main.loginLeft form input {
+#fullScreen .loginWrap main.loginLeft form input {
   width: 400px;
   margin-bottom: 40px;
   padding: 10px 0;
@@ -101,65 +104,65 @@ li {
   outline: none;
   transition: all 0.5s;
 }
-.loginWrap main.loginLeft form input::-moz-placeholder {
+#fullScreen .loginWrap main.loginLeft form input::-moz-placeholder {
   font-size: 15px;
   font-weight: normal;
   opacity: 1;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-.loginWrap main.loginLeft form input:-ms-input-placeholder {
+#fullScreen .loginWrap main.loginLeft form input:-ms-input-placeholder {
   font-size: 15px;
   font-weight: normal;
   opacity: 1;
   -ms-transition: all 0.3s;
   transition: all 0.3s;
 }
-.loginWrap main.loginLeft form input::placeholder {
+#fullScreen .loginWrap main.loginLeft form input::placeholder {
   font-size: 15px;
   font-weight: normal;
   opacity: 1;
   transition: all 0.3s;
 }
-.loginWrap main.loginLeft form input:focus {
+#fullScreen .loginWrap main.loginLeft form input:focus {
   border-bottom: 2px solid #F87387;
   caret-color: #F87387;
 }
-.loginWrap main.loginLeft form input:focus::-moz-placeholder {
+#fullScreen .loginWrap main.loginLeft form input:focus::-moz-placeholder {
   opacity: 0;
   visibility: hidden;
 }
-.loginWrap main.loginLeft form input:focus:-ms-input-placeholder {
+#fullScreen .loginWrap main.loginLeft form input:focus:-ms-input-placeholder {
   opacity: 0;
   visibility: hidden;
 }
-.loginWrap main.loginLeft form input:focus::placeholder {
+#fullScreen .loginWrap main.loginLeft form input:focus::placeholder {
   opacity: 0;
   visibility: hidden;
 }
-.loginWrap main.loginLeft form button {
+#fullScreen .loginWrap main.loginLeft form button {
   margin-top: 80px;
   cursor: pointer;
-  width: 120px;
+  width: 150px;
   height: 45px;
   transform: skewX(-20deg);
   background: transparent;
   border: 2px solid #707070;
   transition: all 0.3s;
 }
-.loginWrap main.loginLeft form button:hover {
+#fullScreen .loginWrap main.loginLeft form button:hover {
   border: 2px solid #F87387;
 }
-.loginWrap main.loginLeft form button:hover span {
+#fullScreen .loginWrap main.loginLeft form button:hover span {
   color: #F87387;
 }
-.loginWrap main.loginLeft form button span {
+#fullScreen .loginWrap main.loginLeft form button span {
   display: inline-block;
   font-family: "MaruBuri-Regular";
   font-size: 16px;
   color: #707070;
   transform: skew(20deg);
 }
-.loginWrap main.loginRight img {
+#fullScreen .loginWrap main.loginRight img {
   height: 100%;
 }

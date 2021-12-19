@@ -14,4 +14,5 @@ const mix = require('laravel-mix');
 
 mix.sass('resources/sass/common.scss', 'public/css')
     .sass('resources/sass/login.scss', 'public/css')
-    .sass('resources/sass/profile.scss', 'public/css');
+    .sass('resources/sass/profile.scss', 'public/css')
+    .sass('resources/sass/movies.scss', 'public/css');

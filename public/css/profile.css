@@ -12,6 +12,9 @@
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
+  background-image: url("/img/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -70,7 +73,7 @@ li {
 }
 #fullScreen .profileWrap section p {
   margin-bottom: 20px;
-  font-family: "MaruBuri-Regular", sans-serif;
+  font-family: "MaruBuri-Regular";
   font-size: 1.6rem;
   color: #707070;
 }
@@ -89,6 +92,7 @@ li {
 #fullScreen .profileWrap .profile li {
   text-align: center;
   border-radius: 50%;
+  transform-origin: center;
 }
 #fullScreen .profileWrap .profile li span {
   opacity: 0;
@@ -138,7 +142,7 @@ li {
 }
 #fullScreen .profileWrap .start button {
   cursor: pointer;
-  width: 120px;
+  width: 150px;
   height: 45px;
   transform: skewX(-20deg);
   background: transparent;

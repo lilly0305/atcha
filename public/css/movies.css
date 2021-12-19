@@ -59,3 +59,61 @@ li {
   *zoom: 1;
   /* IE8 이하버전 대응 */
 }
+
+#wrap {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/bg.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+#wrap header {
+  width: 94%;
+  height: 60px;
+  margin: 0 auto;
+}
+#wrap header .headerWrap {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#wrap header .headerWrap span {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #707070;
+  font-family: "MaruBuri-Regular";
+  flex: 1;
+}
+#wrap header .headerWrap a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 3;
+}
+#wrap header .headerWrap a img {
+  height: 40px;
+}
+#wrap header .headerWrap div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#wrap header .headerWrap div p {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid white;
+  overflow: hidden;
+}
+#wrap header .headerWrap div p img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
