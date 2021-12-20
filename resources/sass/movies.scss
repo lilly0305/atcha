@@ -68,7 +68,6 @@
         }
     }
 
-
     .topDivider {
         position: relative;
         box-sizing: border-box;
@@ -104,26 +103,28 @@
 
     main {
         margin-top: 1.5em;
-        .mainSlider{
+
+        .mainSlider {
             width: 90%;
             height: 85vh;
             margin: 0 auto;
             overflow: hidden;
 
-            .swiper-wrapper{
+            .swiper-wrapper {
                 transform: translate3d(0, 0, 0) !important;
 
-                .swiper-slide{
+                .swiper-slide {
                     width: 100%;
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
 
-                    img{
+                    img {
                         width: 100%;
                         height: auto;
                     }
-                    .progressbar{
+
+                    .progressbar {
                         position: absolute;
                         content: '';
                         z-index: 1;
@@ -133,7 +134,7 @@
                         width: 40%;
                         height: 3px;
 
-                        span{
+                        span {
                             position: absolute;
                             z-index: 2;
                             background-color: white;
@@ -150,5 +151,157 @@
         }
     }
 
+    section.todayMovies {
 
+        .recommendToday {
+            box-sizing: border-box;
+            width: 100%;
+            display: flex;
+            font-size: $fs400;
+            overflow: hidden;
+
+            // 오늘의 영화 - 왼쪽 포스터
+            .recLeft {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                figure {
+                    position: relative;
+                    width: 20vw;
+
+                    overflow: hidden;
+                    aspect-ratio: 3/5;
+
+                    img {
+                        position: absolute;
+                        width: 100%;
+                        inset: 0;
+                        object-fit: cover;
+                    }
+                }
+
+                p {
+                    text-align: right;
+                    font-family: $point-kor-font;
+
+                    span.material-icons {
+                        vertical-align: middle;
+                    }
+                }
+            }
+
+            // 오늘의 영화 - 오른쪽
+            .recRight {
+                box-sizing: border-box;
+                height: 100%;
+                margin-left: 2%;
+                font-family: $default-kor-font;
+
+                .movieDetail {
+                    display: flex;
+                    justify-content: flex-start;
+
+
+                    .story {
+                        width: 55%;
+                        margin-left: 2%;
+                        font-size: $fs500;
+
+                        & > * + * {
+                            margin-top: 2rem;
+                        }
+
+                    }
+                }
+
+                .todayPoster {
+                    width: 100%;
+                    overflow: hidden;
+                    margin-top: 160px;
+
+                    .slides {
+                        position: relative;
+                        width: 100%;
+                        max-height: 400px;
+                        display: flex;
+                        overflow: hidden;
+
+                        .swiper-slide {
+                            width: 15vw;
+                            aspect-ratio: 3/4;
+                            margin-right: 30px;
+                            border: 1px solid $grey-color;
+
+                            img {
+                                position: absolute;
+                                width: 100%;
+                                inset: 50%;
+                                transform: translate(-50%, -50%);
+                                object-fit: cover;
+                            }
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    section.masterpiece {
+        width: 100%;
+        height: 90vh;
+        margin: 0 auto;
+
+        ul.posters {
+            border: 1px solid red;
+            display: flex;
+            width: 100vw;
+            margin-top: 10%;
+
+            & > li {
+                position: relative;
+                flex: 1;
+                height: 700px;
+                overflow: hidden;
+
+                transition: all 0.5s;
+
+                &:hover {
+                    transform: scale(1.1);
+                    z-index: 3;
+                    //flex: 2;
+                }
+
+                & > img {
+                    position: absolute;
+                    height: 100%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                & > div {
+                    position: absolute;
+                    z-index: 5;
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: $fs-L;
+
+                    width: 100%;
+                    background: black;
+
+                    button {
+                        @include button();
+                    }
+                }
+
+            }
+        }
+    }
 }

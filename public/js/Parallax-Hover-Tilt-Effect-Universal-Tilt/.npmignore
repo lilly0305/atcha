@@ -1,0 +1,12 @@
+src
+demo
+test
+coverage
+
+.babelrc
+.travis.yml
+.prettierrc
+
+.eslintrc.js
+webpack.config.js
+yarn-error.log
