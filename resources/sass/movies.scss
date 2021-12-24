@@ -119,32 +119,147 @@
                     align-items: center;
                     justify-content: center;
 
+                    .detailModal {
+                        opacity: 0;
+                        z-index: 200;
+                        position: absolute;
+                        inset: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.8);
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: center;
+
+                        transition: opacity 0.5s;
+
+
+
+                        .detailModalWrap{
+                            position: absolute;
+                            display: flex;
+                            justify-content: center;
+                            width: 80%;
+                            height: 85%;
+
+                            margin-top: 200px;
+
+                            figure {
+                                height: 80%;
+                                margin-right: 50px;
+
+                                img {
+                                    height: 100%;
+                                }
+                            }
+
+                            .detailRight {
+                                width: 60%;
+                                display: flex;
+                                flex-direction: column;
+
+                                .rate {
+                                    color: white;
+                                }
+
+                                &>p {
+                                    max-width: 100%;
+                                    color: white;
+                                    font-size: $fs400;
+                                }
+                            }
+                        }
+
+                    }
+
+                    &>ul {
+                        display: flex;
+                        position: absolute;
+                        top: 30px;
+                        left: 50%;
+                        z-index: 300;
+                        transform: translateX(-50%);
+
+                        &>li {
+                            button {
+                                @include button();
+                                border: 1px solid white;
+
+                                span {
+                                    color: white;
+                                }
+
+                                &.detailBtn.active {
+                                    background: white;
+
+                                    &:hover {
+                                        border: 2px solid white;
+
+                                    }
+
+                                    span {
+                                        color: $grey-color;
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
                     img {
                         width: 100%;
                         height: auto;
                     }
 
-                    .progressbar {
-                        position: absolute;
-                        content: '';
-                        z-index: 1;
-                        background-color: rgba(255, 255, 255, 0.5);
-                        left: 30%;
-                        bottom: 40px;
-                        width: 40%;
-                        height: 3px;
+                }
+            }
+        }
 
-                        span {
-                            position: absolute;
-                            z-index: 2;
-                            background-color: white;
-                            left: 0;
-                            bottom: 0;
-                            width: 0;
-                            height: 3px;
-                            animation: progressbar 4s linear infinite;
-                            animation-delay: 0.3s;
-                        }
+        .swiper-progress-bar {
+            position: relative;
+            width: 40%;
+            display: block;
+            z-index: 1;
+            height: 3px;
+            left: 30%;
+            bottom: 30px;
+
+            .slide_progress-bar {
+                position: absolute;
+                height: 3px;
+                background: rgba(255, 255, 255, 0.5);
+                width: auto;
+                clear: both;
+                opacity: 0;
+                bottom: inherit;
+                left: 0;
+                right: 0;
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: white;
+                    height: 100%;
+                    width: 0;
+                    content: "";
+                    transition: 0.1s width linear;
+                }
+            }
+
+            &.active {
+                .slide_progress-bar {
+                    opacity: 1;
+                }
+            }
+
+            &.animate {
+                .slide_progress-bar {
+                    &:after {
+                        transition: width linear;
+                        transition-delay: unset;
+                        width: 100%;
+                        transition-duration: 4s;
                     }
                 }
             }
@@ -303,7 +418,7 @@
         }
     }
 
-    section.movieMusic{
+    section.movieMusic {
         width: 100%;
         height: 90vh;
         background: url("/img/music-bg.png");
@@ -311,11 +426,11 @@
         background-size: 30%;
         background-position: right -30px bottom;
 
-        &>ul{
+        & > ul {
             display: flex;
             align-items: center;
 
-            &>li.active {
+            & > li.active {
                 width: 45rem;
                 height: 45rem;
                 filter: grayscale(0);
@@ -323,7 +438,7 @@
                 border: 1px solid $point-color;
             }
 
-            &>li{
+            & > li {
                 position: relative;
                 width: 25rem;
                 height: 25rem;
@@ -346,11 +461,13 @@
                     z-index: 3;
                     right: 200px;
                 }
+
                 &:nth-child(5) {
                     z-index: 2;
                     right: 250px;
                 }
-                img{
+
+                img {
                     position: absolute;
                     width: 100%;
                     height: auto;
@@ -443,7 +560,7 @@
 
     }
 
-    footer{
+    footer {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -453,7 +570,8 @@
         background: #B4A892;
         color: #4B3232;
         font-size: $fs400;
-        strong{
+
+        strong {
             font-weight: bold;
             margin: 0 5px;
             font-size: $fs500;

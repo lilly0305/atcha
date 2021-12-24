@@ -46,8 +46,8 @@ $fs-XL: 6rem;
 //  ---------------------------------------------------------------- mixin
 @mixin button {
     cursor: pointer;
-    width: 150px;
-    height: 45px;
+    width: 120px;
+    height: 40px;
     transform: skewX(-20deg);
     background: transparent;
     border: 2px solid $grey-color;
@@ -65,7 +65,7 @@ $fs-XL: 6rem;
     span {
         display: inline-block;
         font-family: $point-kor-font;
-        font-size: $fs600;
+        font-size: $fs500;
         color: $grey-color;
         transform: skew(20deg);
     }
@@ -156,7 +156,8 @@ section {
     // 영화 정보 (줄거리 빼고)
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 100%;
+
     p {
         // 영화 타이틀 한글 + 영문 이름
         margin-bottom: 10px;
@@ -172,6 +173,8 @@ section {
         font-size: $fs400;
         margin-top: 20px;
         margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
     }
 
     button {

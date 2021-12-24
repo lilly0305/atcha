@@ -40,32 +40,198 @@
         <div class="swiper-container mainSlider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
+                    <div class="detailModal">
+                        <div class="detailModalWrap">
+                            <figure>
+                                <img src="/img/poster/BreakfastAtTiffany2.jpg" alt="">
+                            </figure>
+
+                            <div class="detailRight">
+                                <div class="rate">
+                                    <p>티파니에서 아침을 <small>(Breakfast at Tiffany's)</small></p>
+                                    <div class="star">
+                            <span class="material-icons">
+                              star
+                            </span>
+                                        <span class="material-icons">
+                              star
+                            </span>
+                                        <span class="material-icons">
+                              star
+                            </span>
+                                        <span class="material-icons">
+                              star
+                            </span>
+                                        <span class="material-icons">
+                              star_half
+                            </span>
+                                        <strong>4.5</strong>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            개봉 : 1962.10.01
+                                        </li>
+                                        <li>
+                                            등급 : 15세 관람가
+                                        </li>
+                                        <li>
+                                            장르 : 드라마
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <p>
+                                    비슷한 품위의 두 집안은 이 이야기가 전개되는 아름다운 '베로나'에서 오래전의 원한이 새로운 문제를 야기하는,
+                                    예의바른 사람들의 피가 예의바른 사람들의 손을 더럽게 한다. 이 두 적의 자식들에 이어서 두 운명에 꼬인 두 연인은
+                                    자신의 생명을 빼앗아 그들 부모의 분쟁을 묻게 한다. 몬태그가와 캐플렛가는 원수지간으로 항상 분쟁이 그칠 날이 없었다.
+                                    캐플렛가의 축제에 참가한 몬태그가의 로미오와 줄리엣은 첫눈에 사랑에 빠진다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <button type="button">
+                            <span>Play
+                              <span class="material-icons">
+                                play_arrow
+                              </span>
+                            </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="detailBtn">
+                                <span>Detail</span>
+                            </button>
+                        </li>
+                    </ul>
+
                     <img src="img/main-banner1.jpg" alt="">
-                    <div class="progressbar">
-                        <span></span>
-                    </div>
+
                 </div>
                 <div class="swiper-slide">
+                    <div class="detailModal">
+                        <div class="detailModalWrap">
+                            <figure>
+                                <img src="/img/poster/BreakfastAtTiffany2.jpg" alt="">
+                            </figure>
+
+                            <div class="detailRight">
+                                <div class="rate">
+                                    <p>로미오와 줄리엣 <small>(Romeo & Juliet)</small></p>
+                                    <div class="star">
+                            <span class="material-icons">
+                              star
+                            </span>
+                                        <span class="material-icons">
+                              star
+                            </span>
+                                        <span class="material-icons">
+                              star
+                            </span>
+                                        <span class="material-icons">
+                              star
+                            </span>
+                                        <span class="material-icons">
+                              star_half
+                            </span>
+                                        <strong>4.5</strong>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            개봉 : 1962.10.01
+                                        </li>
+                                        <li>
+                                            등급 : 15세 관람가
+                                        </li>
+                                        <li>
+                                            장르 : 드라마
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <p>
+                                    비슷한 품위의 두 집안은 이 이야기가 전개되는 아름다운 '베로나'에서 오래전의 원한이 새로운 문제를 야기하는,
+                                    예의바른 사람들의 피가 예의바른 사람들의 손을 더럽게 한다. 이 두 적의 자식들에 이어서 두 운명에 꼬인 두 연인은
+                                    자신의 생명을 빼앗아 그들 부모의 분쟁을 묻게 한다. 몬태그가와 캐플렛가는 원수지간으로 항상 분쟁이 그칠 날이 없었다.
+                                    캐플렛가의 축제에 참가한 몬태그가의 로미오와 줄리엣은 첫눈에 사랑에 빠진다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <button type="button">
+                            <span>Play
+                              <span class="material-icons">
+                                play_arrow
+                              </span>
+                            </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="detailBtn">
+                                <span>Detail</span>
+                            </button>
+                        </li>
+                    </ul>
+
                     <img src="img/main-banner2.jpg" alt="">
-                    <div class="progressbar">
-                        <span></span>
-                    </div>
+
                 </div>
                 <div class="swiper-slide">
+                    <ul>
+                        <li>
+                            <button type="button">
+                            <span>Play
+                              <span class="material-icons">
+                                play_arrow
+                              </span>
+                            </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="detailBtn">
+                                <span>Detail</span>
+                            </button>
+                        </li>
+                    </ul>
+
                     <img src="img/main-banner3.jpg" alt="">
-                    <div class="progressbar">
-                        <span></span>
-                    </div>
+
                 </div>
                 <div class="swiper-slide">
+                    <ul>
+                        <li>
+                            <button type="button">
+                            <span>Play
+                              <span class="material-icons">
+                                play_arrow
+                              </span>
+                            </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="detailBtn">
+                                <span>Detail</span>
+                            </button>
+                        </li>
+                    </ul>
+
                     <img src="img/main-banner4.jpg" alt="">
-                    <div class="progressbar">
-                        <span></span>
-                    </div>
+
                 </div>
             </div>
         </div>
+        <!-- Progressbar -->
+
+        <div class="swiper-progress-bar">
+            <span class="slide_progress-bar"></span>
+        </div>
         <!-- /main swiper slides -->
+
     </main>
 
     <div class="sectionDivider dLeft">
@@ -91,40 +257,43 @@
 
             <div class="recRight">
                 <div class="movieDetail">
-                    <div class="rate">
-                        <p>로미오와 줄리엣 <small>(Romeo & Juliet)</small></p>
-                        <div class="star">
-                            <span class="material-icons">
-                              star
-                            </span>
-                            <span class="material-icons">
-                              star
-                            </span>
-                            <span class="material-icons">
-                              star
-                            </span>
-                            <span class="material-icons">
-                              star
-                            </span>
-                            <span class="material-icons">
-                              star_half
-                            </span>
-                            <strong>4.5</strong>
-                        </div>
-                        <ul>
-                            <li>개봉 : 1978.12.30</li>
-                            <li>등급 : 12세 관람가</li>
-                            <li>장르 : 드라마, 멜로/로맨스</li>
-                        </ul>
+                    <div class="rateWrap">
+                        <div class="rate">
+                            <p>로미오와 줄리엣 <small>(Romeo & Juliet)</small></p>
+                            <div class="star">
+                                <span class="material-icons">
+                                  star
+                                </span>
+                                <span class="material-icons">
+                                  star
+                                </span>
+                                <span class="material-icons">
+                                  star
+                                </span>
+                                <span class="material-icons">
+                                  star
+                                </span>
+                                <span class="material-icons">
+                                  star_half
+                                </span>
+                                <strong>4.5</strong>
+                            </div>
+                            <ul>
+                                <li>개봉 : 1978.12.30</li>
+                                <li>등급 : 12세 관람가</li>
+                                <li>장르 : 드라마, 멜로/로맨스</li>
+                            </ul>
 
-                        <button type="button">
-                            <span>Play
-                              <span class="material-icons">
-                                play_arrow
-                              </span>
-                            </span>
-                        </button>
+                            <button type="button">
+                                <span>Play
+                                  <span class="material-icons">
+                                    play_arrow
+                                  </span>
+                                </span>
+                            </button>
+                        </div>
                     </div>
+
 
                     <div class="story">
                         <p>
@@ -388,8 +557,25 @@
 <script src="js/jquery-migrate-1.4.1.min.js"></script>
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-<script src="https://unpkg.com/universal-tilt.js/"></script>
 <script src="/js/swiper-main.js"></script>
 
+<script>
+    // 메인 detail 클릭시 모달창 생성
+    // let detailBtn = document.querySelector('main.swiper .detailBtn')
+    // detailModal = document.querySelector('main .detailModal')
+    //
+    // detailBtn.addEventListener('click', function () {
+    //     if (detailBtn.classList.contains('active')) {
+    //         detailBtn.classList.remove('active');
+    //         detailBtn.innerHTML = (' <span>Detail</span>');
+    //         detailModal.style.opacity = '0';
+    //     } else {
+    //         detailBtn.classList.add('active');
+    //         detailBtn.innerHTML = (' <span>Close</span>');
+    //         detailModal.style.opacity = '1';
+    //     }
+    //
+    // });
+</script>
 </body>
 </html>
