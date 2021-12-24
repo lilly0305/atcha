@@ -90,6 +90,7 @@ $fs-XL: 6rem;
 
 section {
     margin: 3% 0 0;
+    font-size: $fs500;
 }
 
 .sectionWrap{
@@ -134,6 +135,7 @@ section {
     p {
         display: inline-block;
         margin-left: 50px;
+        margin-right: 0;
         text-align: right;
         font-family: $point-kor-font;
         font-size: $fs-L;
@@ -144,6 +146,7 @@ section {
         // 글씨 왼쪽, 줄 오른쪽
         p {
             margin-right: 50px;
+            margin-left: 0;
             text-align: left;
         }
     }
@@ -165,20 +168,6 @@ section {
         }
     }
 
-    .star {
-        color: $point-color;
-
-        span {
-            vertical-align: middle;
-        }
-
-        strong {
-            vertical-align: middle;
-            font-style: $fs600;
-            margin-left: 10px;
-        }
-    }
-
     ul {
         font-size: $fs400;
         margin-top: 20px;
@@ -189,6 +178,22 @@ section {
         @include button();
     }
 }
+
+.star {
+    color: $point-color;
+
+    span {
+        vertical-align: middle;
+    }
+
+    strong {
+        vertical-align: middle;
+        font-size: $fs600;
+        margin-left: 10px;
+        font-weight: 400;
+    }
+}
+
 
 // ---------------------------------------------------------------- reset
 html, body, div, span, applet, object, iframe,
@@ -207,7 +212,8 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
-    font: inherit;
+    font-family: $default-kor-font;
+    line-height: 1.6;
 }
 
 html {

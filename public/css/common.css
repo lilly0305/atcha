@@ -21,6 +21,7 @@
 
 section {
   margin: 3% 0 0;
+  font-size: 1.5rem;
 }
 
 .sectionWrap {
@@ -59,6 +60,7 @@ section {
 .sectionDivider p {
   display: inline-block;
   margin-left: 50px;
+  margin-right: 0;
   text-align: right;
   font-family: "MaruBuri-Regular", sans-serif;
   font-size: 2rem;
@@ -66,6 +68,7 @@ section {
 }
 .sectionDivider.dRight p {
   margin-right: 50px;
+  margin-left: 0;
   text-align: left;
 }
 
@@ -81,17 +84,6 @@ section {
 }
 .rate p small {
   font-size: 1.4rem;
-}
-.rate .star {
-  color: #F87387;
-}
-.rate .star span {
-  vertical-align: middle;
-}
-.rate .star strong {
-  vertical-align: middle;
-  font-style: 1.6rem;
-  margin-left: 10px;
 }
 .rate ul {
   font-size: 1.4rem;
@@ -127,6 +119,19 @@ section {
   transform: skew(0deg);
 }
 
+.star {
+  color: #F87387;
+}
+.star span {
+  vertical-align: middle;
+}
+.star strong {
+  vertical-align: middle;
+  font-size: 1.6rem;
+  margin-left: 10px;
+  font-weight: 400;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -143,7 +148,8 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font: inherit;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.6;
 }
 
 html {

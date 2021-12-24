@@ -35,7 +35,7 @@
         <img src="/img/divider.png" alt="">
     </div>
 
-    <main>
+    <main class="swiper">
         <!-- Slider main container -->
         <div class="swiper-container mainSlider">
             <div class="swiper-wrapper">
@@ -200,6 +200,186 @@
         </ul>
     </section>
 
+    <div class="sectionDivider dLeft">
+        <div class="divider"></div>
+        <p>음악과 명작의 조화</p>
+    </div>
+
+    <section class="movieMusic">
+        <ul>
+            <li>
+                <img src="/img/poster/SoundOfMusic.jpg" alt="">
+            </li>
+            <li class="active">
+                <img class="positionTop" src="/img/poster/RomanHoliday.jpg" alt="">
+            </li>
+            <li>
+                <img src="/img/poster/gonwiththewind.jpg" alt="">
+            </li>
+            <li>
+                <img src="/img/poster/SingingIntheRain.jpg" alt="">
+            </li>
+            <li>
+                <img src="/img/poster/moderntimes.jpg" alt="모던 타임즈 포스터">
+            </li>
+        </ul>
+
+        <summary>
+            <div>
+                <div class="rate">
+                    <p>로미오와 줄리엣 <small>(Romeo & Juliet)</small></p>
+                    <div class="star">
+                            <span class="material-icons">
+                              star
+                            </span>
+                        <span class="material-icons">
+                              star
+                            </span>
+                        <span class="material-icons">
+                              star
+                            </span>
+                        <span class="material-icons">
+                              star
+                            </span>
+                        <span class="material-icons">
+                        star_outline
+                        </span>
+                        <strong>4</strong>
+                    </div>
+                    <ul>
+                        <li>개봉 : 1978.12.30</li>
+                        <li>등급 : 12세 관람가</li>
+                        <li>장르 : 드라마, 멜로/로맨스</li>
+                    </ul>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto cum dicta fuga impedit
+                    officia, optio qui sed unde vitae!
+                </p>
+            </div>
+        </summary>
+    </section>
+
+    <div class="sectionDivider dRight">
+        <p>놓치지 말자, 고전 명작.</p>
+        <div class="divider"></div>
+    </div>
+
+    <section class="movieReview sectionWrap">
+        <h2>My Neighbor Totoro</h2>
+
+        <div class="reviewTop">
+            <article>
+                <img src="/img/poster/Totoro.jpg" alt="">
+            </article>
+            <div class="reviews">
+                <summary>
+                    <div class="nickname">
+                        <span>nickname1</span>
+                        <div class="star">
+                            <span class="material-icons">
+                              star
+                            </span>
+                            <span class="material-icons">
+                              star
+                            </span>
+                            <span class="material-icons">
+                              star
+                            </span>
+                            <span class="material-icons">
+                              star
+                            </span>
+                            <span class="material-icons">
+                              star_half
+                            </span>
+                            <strong>4.5</strong>
+                        </div>
+                    </div>
+                    <q>
+                        1952년 일본의 아름다운 시골 마을. 자상한 아빠 쿠사카베 타츠오는 도쿄의 대학 연구원이며, 입원 중이지만 따뜻한 미소를 잃지 않는 엄마가 있다.
+                    </q>
+                </summary>
+                <summary>
+                    <div class="nickname">
+                        <span>nickname1</span>
+                        <div class="star">
+                            <span class="material-icons">
+                              star
+                            </span>
+                            <span class="material-icons">
+                              star
+                            </span>
+                            <span class="material-icons">
+                              star
+                            </span>
+                            <span class="material-icons">
+                              star
+                            </span>
+                            <span class="material-icons">
+                              star_half
+                            </span>
+                            <strong>4.5</strong>
+                        </div>
+                    </div>
+                    <q>
+                        1952년 일본의 아름다운 시골 마을. 상냥하고 의젓한 11살 초등학교 4학년생 사츠키와 장난꾸러기에 호기심 많은 4살의 메이는 사이좋은 자매로 아빠와 함께 도시를 떠나
+                        시골로 이사온다. 자상한 아빠 쿠사카베 타츠오는 도쿄의 대학 연구원이며, 입원 중이지만 따뜻한 미소를 잃지 않는 엄마가 있다.
+                    </q>
+                </summary>
+                <summary>
+                    <div class="nickname">
+                        <span>nickname1</span>
+                        <div class="star">
+                            <span class="material-icons">
+                              star
+                            </span>
+                            <span class="material-icons">
+                              star
+                            </span>
+                            <span class="material-icons">
+                              star
+                            </span>
+                            <span class="material-icons">
+                              star
+                            </span>
+                            <span class="material-icons">
+                              star_half
+                            </span>
+                            <strong>4.5</strong>
+                        </div>
+                    </div>
+                    <q>
+                        1952년 일본의 아름다운 시골 마을. 상냥하고 의젓한 11살 초등학교 4학년생 사츠키와 장난꾸러기에 호기심 많은 4살의 메이는 사이좋은 자매로 아빠와 함께 도시를 떠나
+                        시골로 이사온다. 자상한 아빠 쿠사카베 타츠오는 도쿄의 대학 연구원이며, 입원 중이지만 따뜻한 미소를 잃지 않는 엄마가 있다.
+                    </q>
+                </summary>
+
+                <button type="button">
+                    <span>Play
+                      <span class="material-icons">
+                        play_arrow
+                      </span>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <div class="reviewBottom">
+            1952년[17][18] 일본의 아름다운 시골 마을.[19] 상냥하고 의젓한 11살 초등학교 4학년생 사츠키와 장난꾸러기에 호기심 많은 4살의 메이는 사이좋은 자매로 아빠와 함께 도시를 떠나
+            시골로 이사온다. 자상한 아빠 쿠사카베 타츠오는 도쿄의 대학 연구원이며, 입원 중이지만 따뜻한 미소를 잃지 않는 엄마가 있다. 곧 퇴원하실 엄마를 공기가 맑은 곳에서 맞이하기 위해 이사를 온
+            것이다. 숲 한복판에 금방이라도 쓰러질 것처럼 낡은 집을 보며 자매는 새로운 환경에 대한 호기심으로 잔뜩 들뜬다.
+            사츠키가 학교에 간 뒤, 혼자 숲에서 놀고 있던 메이는 눈 앞을 지나가는 조그맣고 이상한 동물을 발견한다. 그리고 뒤를 쫓아 숲속으로 들어가는데... 미로처럼 꼬불꼬불한 길을 따라가다 큰 나무
+            밑둥으로 떨어지는 메이. 그곳에서 메이는 도토리 나무의 요정인 토토로를 만난다. 메이는 사츠키가 돌아오자마자 토토로를 만난 것을 자랑하지만 사츠키는 믿지 않는다. 그러나 비가 몹시 쏟아지던 날,
+            정류장에서 우산을 들고 아빠를 기다리다가 사츠키도 토토로를 만나게 된다.
+            비를 맞는 토토로에게 우산을 빌려주자 토토로는 답례로 도토리 씨앗을 건넨다. 토토로와의 만남으로 행복감에 부풀어있는 사츠키와 메이. 그러나 그때 병원에서 어머니의 퇴원이 연기되었다는 전보가
+            온다. 불안해하는 메이는 혼자 엄마를 찾아 병원으로 떠났다가 길을 잃는다. 온 동네를 뒤졌지만 메이는 흔적조차 없고 저수지에선 어린 여자아이의 샌들이 발견된다. 사츠키는 메이를 찾기 위해 애타게
+            토토로를 부르는데...
+        </div>
+    </section>
+
+    <footer>
+        © 2021 <strong>ATCHA</strong> All rights reserved.
+    </footer>
 </div>
 
 
@@ -211,8 +391,5 @@
 <script src="https://unpkg.com/universal-tilt.js/"></script>
 <script src="/js/swiper-main.js"></script>
 
-<script>
-
-</script>
 </body>
 </html>
