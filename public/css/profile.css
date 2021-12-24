@@ -1,6 +1,8 @@
 @import url(https://fonts.googleapis.com/css2?family=Comforter&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Comforter&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap);
 @charset "UTF-8";
 @font-face {
   font-family: "MaruBuri-Regular";
@@ -17,6 +19,114 @@
   background-repeat: no-repeat;
 }
 
+section {
+  margin: 3% 0 0;
+}
+
+.sectionWrap {
+  /* 좌우 간격 */
+  margin-inline: auto;
+  width: 90%;
+}
+
+.sectionDivider {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 24px;
+  margin: 5% auto 0;
+}
+.sectionDivider .divider {
+  position: relative;
+  display: inline-block;
+  flex: 5;
+}
+.sectionDivider .divider:before, .sectionDivider .divider:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background: #707070;
+}
+.sectionDivider .divider:before {
+  height: 3px;
+  top: 8px;
+}
+.sectionDivider .divider:after {
+  height: 1px;
+  bottom: 8px;
+}
+.sectionDivider p {
+  display: inline-block;
+  margin-left: 50px;
+  text-align: right;
+  font-family: "MaruBuri-Regular", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.sectionDivider.dRight p {
+  margin-right: 50px;
+  text-align: left;
+}
+
+.rate {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+.rate p {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.rate p small {
+  font-size: 1.4rem;
+}
+.rate .star {
+  color: #F87387;
+}
+.rate .star span {
+  vertical-align: middle;
+}
+.rate .star strong {
+  vertical-align: middle;
+  font-style: 1.6rem;
+  margin-left: 10px;
+}
+.rate ul {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.rate button {
+  cursor: pointer;
+  width: 150px;
+  height: 45px;
+  transform: skewX(-20deg);
+  background: transparent;
+  border: 2px solid #707070;
+  transition: all 0.3s;
+}
+.rate button:hover {
+  border: 2px solid #F87387;
+}
+.rate button:hover span {
+  color: #F87387;
+}
+.rate button span {
+  display: inline-block;
+  font-family: "MaruBuri-Regular", sans-serif;
+  font-size: 1.6rem;
+  color: #707070;
+  transform: skew(20deg);
+}
+.rate button span.material-icons {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "Material Icons";
+  transform: skew(0deg);
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,7 +138,7 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
+menu, nav, output, ruby, summary,
 time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -38,7 +148,7 @@ time, mark, audio, video {
 
 html {
   font-size: 62.5%;
-  color: #707070;
+  color: #282828;
 }
 
 a {
@@ -73,8 +183,9 @@ li {
 }
 #fullScreen .profileWrap section p {
   margin-bottom: 20px;
-  font-family: "MaruBuri-Regular";
-  font-size: 1.6rem;
+  font-family: "MaruBuri-Regular", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
   color: #707070;
 }
 #fullScreen .profileWrap section strong {
@@ -87,7 +198,7 @@ li {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 5%;
 }
 #fullScreen .profileWrap .profile li {
   text-align: center;
@@ -98,8 +209,9 @@ li {
   opacity: 0;
   display: inline-block;
   margin-top: 30px;
-  font-size: 16px;
-  font-weight: bold;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
   color: #F87387;
 }
 #fullScreen .profileWrap .profile figure {
@@ -109,7 +221,7 @@ li {
   height: 140px;
   margin: 0 50px;
   border-radius: 50%;
-  border: 1px solid #707070;
+  border: 1px solid #282828;
   filter: grayscale(1);
   overflow: hidden;
   transition: all 0.5s;
@@ -138,7 +250,7 @@ li {
   margin-top: 80px;
 }
 #fullScreen .profileWrap .start {
-  margin-top: 80px;
+  margin-top: 5%;
 }
 #fullScreen .profileWrap .start button {
   cursor: pointer;
@@ -157,8 +269,14 @@ li {
 }
 #fullScreen .profileWrap .start button span {
   display: inline-block;
-  font-family: "MaruBuri-Regular";
-  font-size: 16px;
+  font-family: "MaruBuri-Regular", sans-serif;
+  font-size: 1.6rem;
   color: #707070;
   transform: skew(20deg);
+}
+#fullScreen .profileWrap .start button span.material-icons {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "Material Icons";
+  transform: skew(0deg);
 }

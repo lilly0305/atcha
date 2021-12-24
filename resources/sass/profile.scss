@@ -14,13 +14,14 @@
             text-align: center;
             p{
                 margin-bottom: 20px;
-                @include pointFont();
-                font-size: 1.6rem;
-                color: $base-color;
+                font-family: $point-kor-font;
+                font-size: $fs400;
+                font-weight: 600;
+                color: $grey-color;
             }
             strong{
-                font-family: 'Comforter', cursive;
-                font-size: 6rem;
+                font-family: $logo-font;
+                font-size: $fs-XL;
                 color: $point-color;
             }
         }
@@ -30,7 +31,7 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            margin-top: 100px;
+            margin-top: 5%;
 
             li{
                 text-align: center;
@@ -41,8 +42,9 @@
                     opacity: 0;
                     display: inline-block;
                     margin-top: 30px;
-                    font-size: 16px;
-                    font-weight: bold;
+                    font-family: $default-eng-font;
+                    font-size: $fs600;
+                    font-weight: 500;
                     color: $point-color;
                 }
             }
@@ -91,7 +93,7 @@
         }
 
         .start{
-            margin-top: 80px;
+            margin-top: 5%;
             button{
                 @include button();
 
