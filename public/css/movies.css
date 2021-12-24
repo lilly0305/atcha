@@ -21,6 +21,7 @@
 
 section {
   margin: 3% 0 0;
+  font-size: 1.5rem;
 }
 
 .sectionWrap {
@@ -30,49 +31,67 @@ section {
 }
 
 .sectionDivider {
-  display: flex;
-  justify-content: space-between;
   width: 90%;
-  height: 24px;
   margin: 5% auto 0;
 }
-.sectionDivider .divider {
+
+.sectionDividerFull {
+  width: 95%;
+  margin-top: 5%;
+}
+
+.sectionDivider,
+.sectionDividerFull {
+  display: flex;
+  justify-content: space-between;
+  height: 24px;
+}
+.sectionDivider .divider,
+.sectionDividerFull .divider {
   position: relative;
   display: inline-block;
   flex: 5;
 }
-.sectionDivider .divider:before, .sectionDivider .divider:after {
+.sectionDivider .divider:before, .sectionDivider .divider:after,
+.sectionDividerFull .divider:before,
+.sectionDividerFull .divider:after {
   content: "";
   position: absolute;
   width: 100%;
   left: 0;
   background: #707070;
 }
-.sectionDivider .divider:before {
+.sectionDivider .divider:before,
+.sectionDividerFull .divider:before {
   height: 3px;
   top: 8px;
 }
-.sectionDivider .divider:after {
+.sectionDivider .divider:after,
+.sectionDividerFull .divider:after {
   height: 1px;
   bottom: 8px;
 }
-.sectionDivider p {
+.sectionDivider p,
+.sectionDividerFull p {
   display: inline-block;
   margin-left: 50px;
+  margin-right: 0;
   text-align: right;
   font-family: "MaruBuri-Regular", sans-serif;
   font-size: 2rem;
   font-weight: bold;
 }
-.sectionDivider.dRight p {
+.sectionDivider.dRight p,
+.sectionDividerFull.dRight p {
   margin-right: 50px;
+  margin-left: 0;
   text-align: left;
 }
 
 .rate {
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 100%;
 }
 .rate p {
   margin-bottom: 10px;
@@ -82,26 +101,17 @@ section {
 .rate p small {
   font-size: 1.4rem;
 }
-.rate .star {
-  color: #F87387;
-}
-.rate .star span {
-  vertical-align: middle;
-}
-.rate .star strong {
-  vertical-align: middle;
-  font-style: 1.6rem;
-  margin-left: 10px;
-}
 .rate ul {
   font-size: 1.4rem;
   margin-top: 20px;
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
 }
 .rate button {
   cursor: pointer;
-  width: 150px;
-  height: 45px;
+  width: 120px;
+  height: 40px;
   transform: skewX(-20deg);
   background: transparent;
   border: 2px solid #707070;
@@ -116,7 +126,7 @@ section {
 .rate button span {
   display: inline-block;
   font-family: "MaruBuri-Regular", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: #707070;
   transform: skew(20deg);
 }
@@ -125,6 +135,19 @@ section {
   vertical-align: middle;
   font-family: "Material Icons";
   transform: skew(0deg);
+}
+
+.star {
+  color: #F87387;
+}
+.star span {
+  vertical-align: middle;
+}
+.star strong {
+  vertical-align: middle;
+  font-size: 1.6rem;
+  margin-left: 10px;
+  font-weight: 400;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -143,7 +166,8 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font: inherit;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.6;
 }
 
 html {
@@ -176,7 +200,7 @@ li {
   height: 100%;
   background-image: url("/img/bg.jpg");
   background-repeat: repeat-y;
-  background-size: cover;
+  background-size: contain;
 }
 #wrap header {
   width: 90%;
@@ -247,10 +271,10 @@ li {
   background-size: contain;
 }
 #wrap .topDivider::before {
-  left: 20px;
+  left: 2%;
 }
 #wrap .topDivider::after {
-  right: 20px;
+  right: 2%;
   transform: rotateY(180deg);
 }
 #wrap .topDivider img {
@@ -274,32 +298,138 @@ li {
   align-items: center;
   justify-content: center;
 }
+#wrap main .mainSlider .swiper-wrapper .swiper-slide .detailModal {
+  opacity: 0;
+  z-index: 200;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: opacity 0.5s;
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide .detailModal .detailModalWrap {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 85%;
+  margin-top: 200px;
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide .detailModal .detailModalWrap figure {
+  height: 80%;
+  margin-right: 50px;
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide .detailModal .detailModalWrap figure img {
+  height: 100%;
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide .detailModal .detailModalWrap .detailRight {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide .detailModal .detailModalWrap .detailRight .rate {
+  color: white;
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide .detailModal .detailModalWrap .detailRight > p {
+  max-width: 100%;
+  color: white;
+  font-size: 1.4rem;
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide > ul {
+  display: flex;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  z-index: 300;
+  transform: translateX(-50%);
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide > ul > li button {
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  transform: skewX(-20deg);
+  background: transparent;
+  border: 2px solid #707070;
+  transition: all 0.3s;
+  border: 1px solid white;
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide > ul > li button:hover {
+  border: 2px solid #F87387;
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide > ul > li button:hover span {
+  color: #F87387;
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide > ul > li button span {
+  display: inline-block;
+  font-family: "MaruBuri-Regular", sans-serif;
+  font-size: 1.5rem;
+  color: #707070;
+  transform: skew(20deg);
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide > ul > li button span.material-icons {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "Material Icons";
+  transform: skew(0deg);
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide > ul > li button span {
+  color: white;
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide > ul > li button.detailBtn.active {
+  background: white;
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide > ul > li button.detailBtn.active:hover {
+  border: 2px solid white;
+}
+#wrap main .mainSlider .swiper-wrapper .swiper-slide > ul > li button.detailBtn.active span {
+  color: #707070;
+}
 #wrap main .mainSlider .swiper-wrapper .swiper-slide img {
   width: 100%;
   height: auto;
 }
-#wrap main .mainSlider .swiper-wrapper .swiper-slide .progressbar {
-  position: absolute;
-  content: "";
-  z-index: 1;
-  background-color: rgba(255, 255, 255, 0.5);
-  left: 30%;
-  bottom: 40px;
+#wrap main .swiper-progress-bar {
+  position: relative;
   width: 40%;
+  display: block;
+  z-index: 1;
   height: 3px;
+  left: 30%;
+  bottom: 30px;
 }
-#wrap main .mainSlider .swiper-wrapper .swiper-slide .progressbar span {
+#wrap main .swiper-progress-bar .slide_progress-bar {
   position: absolute;
-  z-index: 2;
-  background-color: white;
-  left: 0;
-  bottom: 0;
-  width: 0;
   height: 3px;
-  -webkit-animation: progressbar 4s linear infinite;
-          animation: progressbar 4s linear infinite;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  background: rgba(255, 255, 255, 0.5);
+  width: auto;
+  clear: both;
+  opacity: 0;
+  bottom: inherit;
+  left: 0;
+  right: 0;
+}
+#wrap main .swiper-progress-bar .slide_progress-bar:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  height: 100%;
+  width: 0;
+  content: "";
+  transition: 0.1s width linear;
+}
+#wrap main .swiper-progress-bar.active .slide_progress-bar {
+  opacity: 1;
+}
+#wrap main .swiper-progress-bar.animate .slide_progress-bar:after {
+  transition: width linear;
+  transition-delay: unset;
+  width: 100%;
+  transition-duration: 4s;
 }
 #wrap section.todayMovies .recommendToday {
   box-sizing: border-box;
@@ -346,7 +476,6 @@ li {
 #wrap section.todayMovies .recommendToday .recRight .movieDetail .story {
   width: 55%;
   margin-left: 2%;
-  font-size: 1.5rem;
 }
 #wrap section.todayMovies .recommendToday .recRight .movieDetail .story > * + * {
   margin-top: 2rem;
@@ -379,13 +508,12 @@ li {
 }
 #wrap section.masterpiece {
   width: 100%;
+  max-width: 100vw;
   height: 90vh;
   margin: 0 auto;
 }
 #wrap section.masterpiece ul.posters {
-  border: 1px solid red;
   display: flex;
-  width: 100vw;
   margin-top: 10%;
 }
 #wrap section.masterpiece ul.posters > li {
@@ -420,8 +548,8 @@ li {
 }
 #wrap section.masterpiece ul.posters > li > div button {
   cursor: pointer;
-  width: 150px;
-  height: 45px;
+  width: 120px;
+  height: 40px;
   transform: skewX(-20deg);
   background: transparent;
   border: 2px solid #707070;
@@ -436,7 +564,7 @@ li {
 #wrap section.masterpiece ul.posters > li > div button span {
   display: inline-block;
   font-family: "MaruBuri-Regular", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: #707070;
   transform: skew(20deg);
 }
@@ -445,4 +573,178 @@ li {
   vertical-align: middle;
   font-family: "Material Icons";
   transform: skew(0deg);
+}
+#wrap section.movieMusic {
+  width: 100%;
+  height: 90vh;
+  background: url("/img/music-bg.png");
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: right -30px bottom;
+}
+#wrap section.movieMusic > ul {
+  display: flex;
+  align-items: center;
+}
+#wrap section.movieMusic > ul > li.active {
+  width: 45rem;
+  height: 45rem;
+  filter: grayscale(0);
+  z-index: 5;
+  border: 1px solid #F87387;
+}
+#wrap section.movieMusic > ul > li {
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  overflow: hidden;
+  filter: grayscale(1);
+  border: 1px solid #707070;
+}
+#wrap section.movieMusic > ul > li:first-child {
+  z-index: 1;
+  left: 80px;
+}
+#wrap section.movieMusic > ul > li:nth-child(3) {
+  z-index: 4;
+  right: 100px;
+}
+#wrap section.movieMusic > ul > li:nth-child(4) {
+  z-index: 3;
+  right: 200px;
+}
+#wrap section.movieMusic > ul > li:nth-child(5) {
+  z-index: 2;
+  right: 250px;
+}
+#wrap section.movieMusic > ul > li img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#wrap section.movieMusic > ul > li img.positionTop {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#wrap section.movieReview h2 {
+  text-align: center;
+  font-family: "Eczar", serif;
+  font-size: 6rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+#wrap section.movieReview .reviewTop {
+  display: flex;
+  margin-bottom: 30px;
+}
+#wrap section.movieReview .reviewTop article {
+  flex: 2;
+}
+#wrap section.movieReview .reviewTop article img {
+  width: 100%;
+}
+#wrap section.movieReview .reviewTop .reviews {
+  position: relative;
+  flex: 1;
+  margin-left: 3%;
+  display: flex;
+  flex-direction: column;
+}
+#wrap section.movieReview .reviewTop .reviews summary {
+  margin-bottom: 30px;
+}
+#wrap section.movieReview .reviewTop .reviews summary .nickname {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+#wrap section.movieReview .reviewTop .reviews summary .nickname > span {
+  font-weight: bold;
+  font-family: "MaruBuri-Regular", sans-serif;
+}
+#wrap section.movieReview .reviewTop .reviews summary .nickname .star {
+  margin-left: 40px;
+}
+#wrap section.movieReview .reviewTop .reviews summary q {
+  font-size: 1.4rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  quotes: none;
+}
+#wrap section.movieReview .reviewTop .reviews button {
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  transform: skewX(-20deg);
+  background: transparent;
+  border: 2px solid #707070;
+  transition: all 0.3s;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#wrap section.movieReview .reviewTop .reviews button:hover {
+  border: 2px solid #F87387;
+}
+#wrap section.movieReview .reviewTop .reviews button:hover span {
+  color: #F87387;
+}
+#wrap section.movieReview .reviewTop .reviews button span {
+  display: inline-block;
+  font-family: "MaruBuri-Regular", sans-serif;
+  font-size: 1.5rem;
+  color: #707070;
+  transform: skew(20deg);
+}
+#wrap section.movieReview .reviewTop .reviews button span.material-icons {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "Material Icons";
+  transform: skew(0deg);
+}
+#wrap section.list1 {
+  position: relative;
+  max-width: 100vw;
+  margin-left: 5%;
+  overflow: hidden;
+}
+#wrap section.list1 .swiper-wrapper .swiper-slide {
+  max-width: 240px;
+  height: 320px;
+}
+#wrap section.list1 .swiper-wrapper .swiper-slide img {
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#wrap footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  margin-top: 60px;
+  background: #B4A892;
+  color: #4B3232;
+  font-size: 1.4rem;
+}
+#wrap footer strong {
+  font-weight: bold;
+  margin: 0 5px;
+  font-size: 1.5rem;
 }
