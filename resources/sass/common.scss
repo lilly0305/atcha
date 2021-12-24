@@ -99,13 +99,20 @@ section {
     width: 90%;
 }
 
-.sectionDivider {
+.sectionDivider{
+    width: 90%;
+    margin: 5% auto 0;
+}
+.sectionDividerFull{
+    width: 95%;
+    margin-top: 5%;
+}
+.sectionDivider,
+.sectionDividerFull{
     // 각 section 챕터 제목
     display: flex;
     justify-content: space-between;
-    width: 90%;
     height: 24px;
-    margin: 5% auto 0;
 
     .divider{
         position: relative;

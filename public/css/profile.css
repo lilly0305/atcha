@@ -31,33 +31,48 @@ section {
 }
 
 .sectionDivider {
-  display: flex;
-  justify-content: space-between;
   width: 90%;
-  height: 24px;
   margin: 5% auto 0;
 }
-.sectionDivider .divider {
+
+.sectionDividerFull {
+  width: 95%;
+  margin-top: 5%;
+}
+
+.sectionDivider,
+.sectionDividerFull {
+  display: flex;
+  justify-content: space-between;
+  height: 24px;
+}
+.sectionDivider .divider,
+.sectionDividerFull .divider {
   position: relative;
   display: inline-block;
   flex: 5;
 }
-.sectionDivider .divider:before, .sectionDivider .divider:after {
+.sectionDivider .divider:before, .sectionDivider .divider:after,
+.sectionDividerFull .divider:before,
+.sectionDividerFull .divider:after {
   content: "";
   position: absolute;
   width: 100%;
   left: 0;
   background: #707070;
 }
-.sectionDivider .divider:before {
+.sectionDivider .divider:before,
+.sectionDividerFull .divider:before {
   height: 3px;
   top: 8px;
 }
-.sectionDivider .divider:after {
+.sectionDivider .divider:after,
+.sectionDividerFull .divider:after {
   height: 1px;
   bottom: 8px;
 }
-.sectionDivider p {
+.sectionDivider p,
+.sectionDividerFull p {
   display: inline-block;
   margin-left: 50px;
   margin-right: 0;
@@ -66,7 +81,8 @@ section {
   font-size: 2rem;
   font-weight: bold;
 }
-.sectionDivider.dRight p {
+.sectionDivider.dRight p,
+.sectionDividerFull.dRight p {
   margin-right: 50px;
   margin-left: 0;
   text-align: left;

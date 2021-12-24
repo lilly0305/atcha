@@ -546,6 +546,41 @@
         </div>
     </section>
 
+    <div class="sectionDividerFull dLeft">
+        <div class="divider"></div>
+        <p>클래식 공포영화</p>
+    </div>
+
+    <section class="list1">
+        <!-- Slider main container -->
+        <div class="swiper list1">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="/img/poster/SoundOfMusic.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img class="positionTop" src="/img/poster/RomanHoliday.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/img/poster/gonwiththewind.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/img/poster/SingingIntheRain.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/img/poster/moderntimes.jpg" alt="모던 타임즈 포스터">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/img/poster/TheExorcist.jpg" alt="">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
     <footer>
         © 2021 <strong>ATCHA</strong> All rights reserved.
     </footer>

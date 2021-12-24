@@ -39,6 +39,9 @@
     });
 
 
+    var swiper = new Swiper(".list1", {
+        loop : true,
+        slidesPerView : 5.5, // 동시에 보여줄 슬라이드 갯수
+        spaceBetween: 30,
 
-
-
+    });
