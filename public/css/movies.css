@@ -10,6 +10,22 @@
   font-weight: normal;
   font-style: normal;
 }
+body::-webkit-scrollbar {
+  /* 스크롤바 전체 영역 */
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  /* 스크롤이 움직이는 영역  */
+  background-color: #707070;
+}
+
+body::-webkit-scrollbar-thumb {
+  /*  스크롤  */
+  background-color: #B4A892;
+  border-radius: 30px;
+}
+
 #fullScreen {
   box-sizing: border-box;
   width: 100vw;
@@ -38,6 +54,9 @@ section {
 .sectionDividerFull {
   width: 95%;
   margin-top: 5%;
+}
+.sectionDividerFull.dRight {
+  margin-left: 5%;
 }
 
 .sectionDivider,
@@ -507,25 +526,40 @@ li {
      object-fit: cover;
 }
 #wrap section.masterpiece {
-  width: 100%;
-  max-width: 100vw;
+  box-sizing: border-box;
   height: 90vh;
   margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 5%;
 }
 #wrap section.masterpiece ul.posters {
+  box-sizing: border-box;
   display: flex;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  max-height: 80%;
+  height: 85%;
   margin-top: 10%;
 }
 #wrap section.masterpiece ul.posters > li {
   position: relative;
   flex: 1;
-  height: 700px;
-  overflow: hidden;
+  height: 100%;
+  transform-style: preserve-3d;
+  filter: grayscale(1);
   transition: all 0.5s;
+  overflow: hidden;
 }
 #wrap section.masterpiece ul.posters > li:hover {
   transform: scale(1.1);
   z-index: 3;
+  filter: grayscale(0);
+}
+#wrap section.masterpiece ul.posters > li:hover > div {
+  opacity: 1;
+}
+#wrap section.masterpiece ul.posters > li:hover > div p {
+  opacity: 1;
 }
 #wrap section.masterpiece ul.posters > li > img {
   position: absolute;
@@ -535,16 +569,38 @@ li {
   transform: translate(-50%, -50%);
 }
 #wrap section.masterpiece ul.posters > li > div {
+  opacity: 0;
   position: absolute;
+  content: "";
   z-index: 5;
-  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  transform: translateZ(50px);
   width: 100%;
-  background: black;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2rem;
+  inset: 0;
+  transition: opacity 0.5s;
+}
+#wrap section.masterpiece ul.posters > li > div p {
+  opacity: 0;
+  width: 90%;
+  margin-bottom: 60px;
+  text-align: center;
+  font-family: "MaruBuri-Regular", sans-serif;
+  transition-delay: 0.5s;
+  transition: opacity 0.5s;
+}
+#wrap section.masterpiece ul.posters > li > div p small {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: lighter;
+  margin-top: 5px;
+  font-family: "Eczar", serif;
 }
 #wrap section.masterpiece ul.posters > li > div button {
   cursor: pointer;
@@ -554,6 +610,8 @@ li {
   background: transparent;
   border: 2px solid #707070;
   transition: all 0.3s;
+  border: 2px solid #F87387;
+  color: #F87387;
 }
 #wrap section.masterpiece ul.posters > li > div button:hover {
   border: 2px solid #F87387;
@@ -573,6 +631,9 @@ li {
   vertical-align: middle;
   font-family: "Material Icons";
   transform: skew(0deg);
+}
+#wrap section.masterpiece ul.posters > li > div button span {
+  color: #F87387;
 }
 #wrap section.movieMusic {
   width: 100%;
@@ -721,11 +782,34 @@ li {
   margin-left: 5%;
   overflow: hidden;
 }
+#wrap section.list1 .swiper-wrapper {
+  display: flex;
+}
 #wrap section.list1 .swiper-wrapper .swiper-slide {
   max-width: 240px;
   height: 320px;
 }
 #wrap section.list1 .swiper-wrapper .swiper-slide img {
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#wrap section.list2 {
+  position: relative;
+  max-width: 100vw;
+  margin-right: 5%;
+  overflow: hidden;
+}
+#wrap section.list2 .swiper-wrapper {
+  display: flex;
+}
+#wrap section.list2 .swiper-wrapper .swiper-slide {
+  max-width: 240px;
+  height: 320px;
+}
+#wrap section.list2 .swiper-wrapper .swiper-slide img {
   position: absolute;
   width: 100%;
   inset: 0;

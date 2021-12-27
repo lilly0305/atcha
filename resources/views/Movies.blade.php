@@ -345,26 +345,49 @@
 
     <section class="masterpiece">
         <ul class="posters">
-            <li>
+            <li data-tilt>
                 <img src="/img/poster/moderntimes.jpg" alt="모던 타임즈 포스터">
                 <div>
-                    <p>모던타임즈 <small>(Romeo & Juliet)</small></p>
+                    <p>모던타임즈 <small>(Modern Times)</small></p>
                     <button type="button">
                         <span>Detail</span>
                     </button>
                 </div>
             </li>
-            <li>
+            <li data-tilt>
                 <img src="/img/poster/gonwiththewind.jpg" alt="">
+                <div>
+                    <p>바람과 함께 사라지다 <small>(Gone with Wind)</small></p>
+                    <button type="button">
+                        <span>Detail</span>
+                    </button>
+                </div>
             </li>
-            <li>
-                <img src="/img/poster/RomanHoliday.jpg" alt="">
+            <li data-tilt>
+                <img src="/img/poster/RomanHoliday.jpg" alt="">   <div>
+                    <p>로마의 휴일<small>(Roman Holiday)</small></p>
+                    <button type="button">
+                        <span>Detail</span>
+                    </button>
+                </div>
             </li>
-            <li>
+            <li data-tilt>
                 <img src="/img/poster/SingingIntheRain.jpg" alt="">
+                <div>
+                    <p>싱잉 인더 레인<small>(Singing in the Rain)</small></p>
+                    <button type="button">
+                        <span>Detail</span>
+                    </button>
+                </div>
             </li>
-            <li>
+            <li data-tilt>
                 <img src="/img/poster/SoundOfMusic.jpg" alt="">
+                <div>
+                    <p>사운드 오브 뮤직<small>(the Sound of Music)</small></p>
+                    <button type="button">
+                        <span>Detail</span>
+                    </button>
+                </div>
             </li>
         </ul>
     </section>
@@ -581,6 +604,41 @@
         </div>
     </section>
 
+    <div class="sectionDividerFull dRight">
+        <p>이름이 장르, 눈빛이 멜로.</p>
+        <div class="divider"></div>
+    </div>
+
+    <section class="list2">
+        <!-- Slider main container -->
+        <div class="swiper list1">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="/img/poster/SoundOfMusic.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img class="positionTop" src="/img/poster/RomanHoliday.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/img/poster/gonwiththewind.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/img/poster/SingingIntheRain.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/img/poster/moderntimes.jpg" alt="모던 타임즈 포스터">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/img/poster/TheExorcist.jpg" alt="">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
     <footer>
         © 2021 <strong>ATCHA</strong> All rights reserved.
     </footer>
@@ -591,6 +649,18 @@
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/jquery-migrate-1.4.1.min.js"></script>
 
+{{-- tilt.js --}}
+<script src="js/tilt.js-master/dest/tilt.jquery.js"></script>
+<script>
+    $('.masterpiece .posters li').tilt({
+        max: 25,
+        speed: 1000,
+        scale: 1.1,
+    })
+
+</script>
+
+{{-- swiper --}}
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="/js/swiper-main.js"></script>
 

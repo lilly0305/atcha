@@ -134,8 +134,7 @@
                         transition: opacity 0.5s;
 
 
-
-                        .detailModalWrap{
+                        .detailModalWrap {
                             position: absolute;
                             display: flex;
                             justify-content: center;
@@ -162,7 +161,7 @@
                                     color: white;
                                 }
 
-                                &>p {
+                                & > p {
                                     max-width: 100%;
                                     color: white;
                                     font-size: $fs400;
@@ -172,7 +171,7 @@
 
                     }
 
-                    &>ul {
+                    & > ul {
                         display: flex;
                         position: absolute;
                         top: 30px;
@@ -180,7 +179,7 @@
                         z-index: 300;
                         transform: translateX(-50%);
 
-                        &>li {
+                        & > li {
                             button {
                                 @include button();
                                 border: 1px solid white;
@@ -365,27 +364,42 @@
     }
 
     section.masterpiece {
-        width: 100%;
-        max-width: 100vw;
+        box-sizing: border-box;
         height: 90vh;
         margin: 0 auto;
+        overflow: hidden;
+        //border: 1px solid red;
+        padding-bottom: 5%;
 
         ul.posters {
+            box-sizing: border-box;
             display: flex;
+            flex-wrap: wrap;
+            max-width: 100vw;
+            max-height: 80%;
+            height: 85%;
             margin-top: 10%;
 
             & > li {
                 position: relative;
                 flex: 1;
-                height: 700px;
-                overflow: hidden;
-
+                height: 100%;
+                transform-style: preserve-3d;
+                filter: grayscale(1);
                 transition: all 0.5s;
+                overflow: hidden;
 
                 &:hover {
                     transform: scale(1.1);
                     z-index: 3;
-                    //flex: 2;
+                    filter: grayscale(0);
+
+                    &>div {
+                        opacity: 1;
+                        p{
+                            opacity: 1;
+                        }
+                    }
                 }
 
                 & > img {
@@ -397,20 +411,52 @@
                 }
 
                 & > div {
+                    opacity: 0;
                     position: absolute;
+                    content: '';
                     z-index: 5;
-                    color: white;
+
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
+                    transform: translateZ(50px);
+                    width: 100%;
+                    height: 100%;
+
+                    background: rgba(0, 0, 0, 0.5);
+                    color: white;
                     font-size: $fs-L;
 
-                    width: 100%;
-                    background: black;
+                    inset: 0;
+                    transition: opacity 0.5s;
+
+                    p {
+                        opacity: 0;
+                        width: 90%;
+                        margin-bottom: 60px;
+                        text-align: center;
+                        font-family: $point-kor-font;
+                        transition-delay: 0.5s;
+                        transition: opacity 0.5s;
+
+                        small {
+                            display: block;
+                            font-size: $fs400;
+                            font-weight: lighter;
+                            margin-top: 5px;
+                            font-family: $point-eng-font;
+                        }
+                    }
 
                     button {
                         @include button();
+                        border: 2px solid $point-color;
+                        color: $point-color;
+
+                        span{
+                            color: $point-color;
+                        }
                     }
                 }
 
@@ -560,18 +606,20 @@
 
     }
 
-    section.list1{
+    section.list1 {
         position: relative;
         max-width: 100vw;
         margin-left: 5%;
         overflow: hidden;
 
         .swiper-wrapper {
+            display: flex;
 
             .swiper-slide {
                 max-width: 240px;
                 height: 320px;
-                img{
+
+                img {
                     position: absolute;
                     width: 100%;
                     inset: 0;
@@ -580,6 +628,30 @@
             }
         }
     }
+
+    section.list2 {
+        position: relative;
+        max-width: 100vw;
+        margin-right: 5%;
+        overflow: hidden;
+
+        .swiper-wrapper {
+            display: flex;
+
+            .swiper-slide {
+                max-width: 240px;
+                height: 320px;
+
+                img {
+                    position: absolute;
+                    width: 100%;
+                    inset: 0;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
     @media (max-width: 100em) {
 
     }

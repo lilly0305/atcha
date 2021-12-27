@@ -1,5 +1,5 @@
     // 메인 스와이퍼
-    var swiper = new Swiper(".mainSlider", {
+    var swiper1 = new Swiper(".mainSlider", {
         effect: 'fade',
         autoplay: {
             delay: 4000,
@@ -31,17 +31,29 @@
     });
 
     $('.mainSlider').hover(function() {
-        swiper.autoplay.stop();
+        swiper1.autoplay.stop();
         $('.swiper-progress-bar').removeClass('animate');
     }, function(){
-        swiper.autoplay.start();
+        swiper1.autoplay.start();
         $('.swiper-progress-bar').addClass('animate');
     });
 
 
-    var swiper = new Swiper(".list1", {
+    // 무한 영화 리스트
+    var swiper2 = new Swiper(".list1", {
         loop : true,
         slidesPerView : 5.5, // 동시에 보여줄 슬라이드 갯수
         spaceBetween: 30,
-
     });
+
+
+    // 오늘은 이 영화 어때요
+    var swiper3 = new Swiper(".todayPoster", {
+        loop : true,
+        slidesPerView : 3.5, // 동시에 보여줄 슬라이드 갯수
+    });
+
+
+
+
+
