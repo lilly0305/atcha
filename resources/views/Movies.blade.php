@@ -119,7 +119,7 @@
 
                             <div class="detailRight">
                                 <div class="rate">
-                                    <p>로미오와 줄리엣 <small>(Romeo & Juliet)</small></p>
+                                    <p>티파니에서 아침을 <small>(Breakfast at Tiffany's)</small></p>
                                     <div class="star">
                             <span class="material-icons">
                               star
@@ -312,23 +312,30 @@
 
                 </div>
 
-                <div class="todayPoster">
-                    <div class="slides">
-                        <div class="swiper-slide">
-                            <img src="/img/poster/Leon.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/img/poster/BackTotheFuture.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/img/poster/GhostBusters.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/img/poster/Scarface.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/img/poster/Leon.jpg" alt="">
-                        </div>
+                <div class="posterWrap">
+                    <div class="sideBtn">
+                        <div class="prev"></div>
+                        <div class="next"></div>
+                    </div>
+
+                    <div class="todayPoster">
+                        <ul class="slides">
+                            <li>
+                                <img src="/img/poster/Leon.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="/img/poster/BackTotheFuture.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="/img/poster/GhostBusters.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="/img/poster/Scarface.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="/img/poster/TheExorcist.jpg" alt="">
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
@@ -364,7 +371,8 @@
                 </div>
             </li>
             <li data-tilt>
-                <img src="/img/poster/RomanHoliday.jpg" alt="">   <div>
+                <img src="/img/poster/RomanHoliday.jpg" alt="">
+                <div>
                     <p>로마의 휴일<small>(Roman Holiday)</small></p>
                     <button type="button">
                         <span>Detail</span>
@@ -374,7 +382,7 @@
             <li data-tilt>
                 <img src="/img/poster/SingingIntheRain.jpg" alt="">
                 <div>
-                    <p>싱잉 인더 레인<small>(Singing in the Rain)</small></p>
+                    <p>사랑은 비를 타고<small>(Singing in the Rain)</small></p>
                     <button type="button">
                         <span>Detail</span>
                     </button>
@@ -656,31 +664,17 @@
         max: 25,
         speed: 1000,
         scale: 1.1,
+        reverse: true,
     })
-
 </script>
 
 {{-- swiper --}}
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="/js/swiper-main.js"></script>
+<script src="/js/slide.js"></script>
 
 <script>
-    // 메인 detail 클릭시 모달창 생성
-    // let detailBtn = document.querySelector('main.swiper .detailBtn')
-    // detailModal = document.querySelector('main .detailModal')
-    //
-    // detailBtn.addEventListener('click', function () {
-    //     if (detailBtn.classList.contains('active')) {
-    //         detailBtn.classList.remove('active');
-    //         detailBtn.innerHTML = (' <span>Detail</span>');
-    //         detailModal.style.opacity = '0';
-    //     } else {
-    //         detailBtn.classList.add('active');
-    //         detailBtn.innerHTML = (' <span>Close</span>');
-    //         detailModal.style.opacity = '1';
-    //     }
-    //
-    // });
+
 </script>
 </body>
 </html>

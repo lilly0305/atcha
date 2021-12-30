@@ -484,6 +484,7 @@ li {
 }
 #wrap section.todayMovies .recommendToday .recRight {
   box-sizing: border-box;
+  width: 75vw;
   height: 100%;
   margin-left: 2%;
   font-family: "Noto Sans KR", sans-serif;
@@ -499,25 +500,59 @@ li {
 #wrap section.todayMovies .recommendToday .recRight .movieDetail .story > * + * {
   margin-top: 2rem;
 }
-#wrap section.todayMovies .recommendToday .recRight .todayPoster {
+#wrap section.todayMovies .recommendToday .recRight .posterWrap {
   width: 100%;
   overflow: hidden;
   margin-top: 160px;
 }
-#wrap section.todayMovies .recommendToday .recRight .todayPoster .slides {
+#wrap section.todayMovies .recommendToday .recRight .posterWrap .sideBtn {
+  width: 90%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+#wrap section.todayMovies .recommendToday .recRight .posterWrap .sideBtn > div {
+  cursor: pointer;
+  width: 61px;
+  height: 16px;
+  background-image: url("/img/back.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#wrap section.todayMovies .recommendToday .recRight .posterWrap .sideBtn > div:hover, #wrap section.todayMovies .recommendToday .recRight .posterWrap .sideBtn > div.active {
+  background-image: url("/img/foward.png");
+  transform: scaleX(-1);
+}
+#wrap section.todayMovies .recommendToday .recRight .posterWrap .sideBtn .next {
+  transform: scaleX(-1);
+}
+#wrap section.todayMovies .recommendToday .recRight .posterWrap .sideBtn .next:hover, #wrap section.todayMovies .recommendToday .recRight .posterWrap .sideBtn .next.active {
+  transform: scaleX(1);
+}
+#wrap section.todayMovies .recommendToday .recRight .posterWrap .todayPoster {
+  position: relative;
+}
+#wrap section.todayMovies .recommendToday .recRight .posterWrap .todayPoster .slides {
   position: relative;
   width: 100%;
   max-height: 400px;
   display: flex;
   overflow: hidden;
+  left: 0;
+  top: 0;
 }
-#wrap section.todayMovies .recommendToday .recRight .todayPoster .slides .swiper-slide {
+#wrap section.todayMovies .recommendToday .recRight .posterWrap .todayPoster .slides.animated {
+  transition: 0.5s ease-out;
+}
+#wrap section.todayMovies .recommendToday .recRight .posterWrap .todayPoster .slides li {
+  position: relative;
   width: 15vw;
   aspect-ratio: 3/4;
   margin-right: 30px;
   border: 1px solid #707070;
 }
-#wrap section.todayMovies .recommendToday .recRight .todayPoster .slides .swiper-slide img {
+#wrap section.todayMovies .recommendToday .recRight .posterWrap .todayPoster .slides li img {
   position: absolute;
   width: 100%;
   inset: 50%;
@@ -545,13 +580,13 @@ li {
   position: relative;
   flex: 1;
   height: 100%;
-  transform-style: preserve-3d;
   filter: grayscale(1);
   transition: all 0.5s;
   overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 #wrap section.masterpiece ul.posters > li:hover {
-  transform: scale(1.1);
   z-index: 3;
   filter: grayscale(0);
 }
@@ -577,14 +612,13 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transform: translateZ(50px);
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   color: white;
   font-size: 2rem;
   inset: 0;
-  transition: opacity 0.5s;
+  transition: all 0.5s;
 }
 #wrap section.masterpiece ul.posters > li > div p {
   opacity: 0;
@@ -592,13 +626,12 @@ li {
   margin-bottom: 60px;
   text-align: center;
   font-family: "MaruBuri-Regular", sans-serif;
-  transition-delay: 0.5s;
-  transition: opacity 0.5s;
+  font-weight: 600;
 }
 #wrap section.masterpiece ul.posters > li > div p small {
   display: block;
   font-size: 1.4rem;
-  font-weight: lighter;
+  font-weight: 400;
   margin-top: 5px;
   font-family: "Eczar", serif;
 }
