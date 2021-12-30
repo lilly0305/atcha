@@ -10,6 +10,22 @@
   font-weight: normal;
   font-style: normal;
 }
+body::-webkit-scrollbar {
+  /* 스크롤바 전체 영역 */
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  /* 스크롤이 움직이는 영역  */
+  background-color: #707070;
+}
+
+body::-webkit-scrollbar-thumb {
+  /*  스크롤  */
+  background-color: #B4A892;
+  border-radius: 30px;
+}
+
 #fullScreen {
   box-sizing: border-box;
   width: 100vw;
@@ -38,6 +54,9 @@ section {
 .sectionDividerFull {
   width: 95%;
   margin-top: 5%;
+}
+.sectionDividerFull.dRight {
+  margin-left: 5%;
 }
 
 .sectionDivider,

@@ -1,5 +1,21 @@
+    // 메인 detail 클릭시 모달창 생성
+    let detailBtn = document.querySelector('main.swiper .detailBtn'),
+    detailModal = document.querySelector('main .detailModal');
+
+    detailBtn.addEventListener('click', function () {
+        if (detailBtn.classList.contains('active')) {
+            detailBtn.classList.remove('active');
+            detailBtn.innerHTML = (' <span>Detail</span>');
+            detailModal.style.opacity = '0';
+        } else {
+            detailBtn.classList.add('active');
+            detailBtn.innerHTML = (' <span>Close</span>');
+            detailModal.style.opacity = '1';
+        }
+    });
+
     // 메인 스와이퍼
-    var swiper = new Swiper(".mainSlider", {
+    var swiper1 = new Swiper(".mainSlider", {
         effect: 'fade',
         autoplay: {
             delay: 4000,
@@ -31,17 +47,24 @@
     });
 
     $('.mainSlider').hover(function() {
-        swiper.autoplay.stop();
+        swiper1.autoplay.stop();
         $('.swiper-progress-bar').removeClass('animate');
     }, function(){
-        swiper.autoplay.start();
+        swiper1.autoplay.start();
         $('.swiper-progress-bar').addClass('animate');
     });
 
 
-    var swiper = new Swiper(".list1", {
-        loop : true,
-        slidesPerView : 5.5, // 동시에 보여줄 슬라이드 갯수
-        spaceBetween: 30,
 
+
+    // 무한 영화 리스트
+    var swiper2 = new Swiper(".list1", {
+        loop : true,
+        slidesPerView : "auto", // 동시에 보여줄 슬라이드 갯수
+        spaceBetween: 30,
+        loopedSlides: 50
     });
+
+
+
+

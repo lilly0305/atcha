@@ -70,7 +70,7 @@ $fs-XL: 6rem;
         transform: skew(20deg);
     }
 
-    span.material-icons{
+    span.material-icons {
         display: inline-block;
         vertical-align: middle;
         font-family: 'Material Icons';
@@ -79,6 +79,21 @@ $fs-XL: 6rem;
 }
 
 // ---------------------------------------------------------------- common style
+body::-webkit-scrollbar {
+    /* 스크롤바 전체 영역 */
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    /* 스크롤이 움직이는 영역  */
+    background-color: $grey-color;
+}
+body::-webkit-scrollbar-thumb {
+    /*  스크롤  */
+    background-color: #B4A892;
+    border-radius:30px;
+}
+
+
 #fullScreen {
     box-sizing: border-box;
     width: 100vw;
@@ -93,28 +108,34 @@ section {
     font-size: $fs500;
 }
 
-.sectionWrap{
+.sectionWrap {
     /* 좌우 간격 */
     margin-inline: auto;
     width: 90%;
 }
 
-.sectionDivider{
+.sectionDivider {
     width: 90%;
     margin: 5% auto 0;
 }
-.sectionDividerFull{
+
+.sectionDividerFull {
     width: 95%;
     margin-top: 5%;
+
+    &.dRight {
+        margin-left: 5%;
+    }
 }
+
 .sectionDivider,
-.sectionDividerFull{
+.sectionDividerFull {
     // 각 section 챕터 제목
     display: flex;
     justify-content: space-between;
     height: 24px;
 
-    .divider{
+    .divider {
         position: relative;
         display: inline-block;
         flex: 5;
